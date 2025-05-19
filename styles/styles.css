@@ -11,18 +11,13 @@ body{
    background-color:#F1DFC2;
 }
 
-/*.navbar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}*/
-
 .navbar{
     display: flex;
     padding: 10px 20px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    position: relative;
+    position:relative;
+    width: 100vw;
 }
 
 .menu{
@@ -58,7 +53,7 @@ body{
       position: absolute;
       top: 80px;
       right: 0%;
-      width: 25%;
+      width: 30%;
       background-color: #ffffff;
       padding: 10px 20px;
       text-align: right;
@@ -76,10 +71,69 @@ body{
 main{
     font-size: 15px;
     font-family: Roboto;
+    width: 75vw;
+    margin: 0 auto;
+}
+    
+p{
+    text-align: center;
+}
+
+.metodo{
+  width: 70vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+}
+
+.card {
+  width: 70vw;
+  max-width: 200px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  align-items: center; 
+}
+
+.card__imagen-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 3; 
+  overflow: hidden; 
+}
+
+.card__imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card--destacada {
+  background-color:#E09249;
+}
+
+.card__titulo {
+  font-size: 1em;
+  text-align: center;
+color: #ffffff;
+}
+
+.card__boton {
+  background-color: #004080;
+  color: white;
+  align-self: center;
+  width: 100%;
+  text-align: center;
+  padding: 10px 20px;
 }
 
 h1{
     color: #455683;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
 }
 
 h2{
@@ -93,29 +147,125 @@ h2{
     display: block;
 }
 
+.galeria{
+  width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.galeria img {
+  flex: 1 1 0;
+  max-width: calc((70vw - 40px) / 3);
+  height: auto;
+  width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .galeria {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .galeria img {
+    max-width: 100%;
+  }
+}
+
 .em{
     font-size: 2em;
 }
 
-form input{
-    margin: 4px;
-
+.formulario {
+  width:70%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-button {
-    background-color:#455683;
-    border: none;
-    color: white;
-    padding: 10px 26px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    border-radius: 5px;
+.formulario label {
+  font-weight: bold;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formulario button {
+  background-color:#455683;
+  border: none;
+  color: #ffffff;
+  padding: 10px 26px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.formulario button:hover {
+  background-color: #002f5f;
+}
+
+.mapa {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  box-sizing: border-box;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9; /* mantiene proporción responsiva */
+  display: block;
+}
+
+  footer{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 10px 20px;
+    width: 70vw;
+    margin: 0 auto;
   }
-
 .rrss{
-    width: 8vw;
+    width: 5vw;
     height: auto;
+    padding: 10px;
+
 
 }
+--#{$prefix}accordion-color: #{$accordion-color};
+--#{$prefix}accordion-bg: #{$accordion-bg};
+--#{$prefix}accordion-transition: #{$accordion-transition};
+--#{$prefix}accordion-border-color: #{$accordion-border-color};
+--#{$prefix}accordion-border-width: #{$accordion-border-width};
+--#{$prefix}accordion-border-radius: #{$accordion-border-radius};
+--#{$prefix}accordion-inner-border-radius: #{$accordion-inner-border-radius};
+--#{$prefix}accordion-btn-padding-x: #{$accordion-button-padding-x};
+--#{$prefix}accordion-btn-padding-y: #{$accordion-button-padding-y};
+--#{$prefix}accordion-btn-color: #{$accordion-button-color};
+--#{$prefix}accordion-btn-bg: #{$accordion-button-bg};
+--#{$prefix}accordion-btn-icon: #{escape-svg($accordion-button-icon)};
+--#{$prefix}accordion-btn-icon-width: #{$accordion-icon-width};
+--#{$prefix}accordion-btn-icon-transform: #{$accordion-icon-transform};
+--#{$prefix}accordion-btn-icon-transition: #{$accordion-icon-transition};
+--#{$prefix}accordion-btn-active-icon: #{escape-svg($accordion-button-active-icon)};
+--#{$prefix}accordion-btn-focus-box-shadow: #{$accordion-button-focus-box-shadow};
+--#{$prefix}accordion-body-padding-x: #{$accordion-body-padding-x};
+--#{$prefix}accordion-body-padding-y: #{$accordion-body-padding-y};
+--#{$prefix}accordion-active-color: #{$accordion-button-active-color};
+--#{$prefix}accordion-active-bg: #{$accordion-button-active-bg};
