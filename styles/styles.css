@@ -1,123 +1,144 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 
-body{
-   font-family: Roboto;
-   background-color:#F1DFC2;
+body {
+  font-family: Roboto;
+  background-color: #F1DFC2;
 }
 
-.navbar{
-    display: flex;
-    padding: 10px 20px;
-    justify-content: center;
-    align-items: center;
-    position:relative;
-    width: 100vw;
+.navbar {
+  display: flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100vw;
 }
 
-.menu{
-    list-style: none;
-    display: flex;
-    padding: 20px;
-    gap: 20px;
+.menu {
+  list-style: none;
+  display: flex;
+  padding: 20px;
+  gap: 20px;
 }
 
-.menu li a{
-    text-decoration: none;
-    color: #455683;
+.menu li a {
+  text-decoration: none;
+  color: #455683;
 }
 
-.menu li a:hover{
-    color: #cc4f48;
+.menu li a:hover {
+  color: #cc4f48;
 }
 
 .menu-toggle {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.img-logo {
+  width: 20vw;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .img-logo {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
     display: none;
-    font-size: 30px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    margin-left: auto;
-  }
-
-  @media (max-width: 768px) {
-    .menu {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 80px;
-      right: 0%;
-      width: 30%;
-      background-color: #ffffff;
-      padding: 10px 20px;
-      text-align: right;
-    }
-  
-    .menu.active {
-      display: flex;
-    }
-  
-    .menu-toggle {
-      display: block;
-    }
-  }
-
-main{
-    font-size: 15px;
-    font-family: Roboto;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 12.5vw;
+    /* Esto hace que se alinee al main (que tiene 75vw de ancho) */
     width: 75vw;
-    margin: 0 auto;
-}
-    
-p{
-    text-align: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    text-align: right;
+    z-index: 1000;
+    /* Esto asegura que quede por encima del carrusel */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar {
+    position: relative;
+    z-index: 1001;
+  }
 }
 
-.metodo{
+main {
+  font-size: 15px;
+  font-family: Roboto;
+  width: 75vw;
+  margin: 0 auto;
+}
+
+p {
+  text-align: center;
+}
+
+.metodo {
   width: 70vw;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
 .card {
   width: 70vw;
-  max-width: 200px;
+  max-width: 300px;
   margin: auto;
   padding: 20px;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  align-items: center; 
+  align-items: center;
 }
 
 .card__imagen-wrapper {
   width: 100%;
-  aspect-ratio: 4 / 3; 
-  overflow: hidden; 
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
 }
 
 .card__imagen {
   width: 100%;
-  height: 100%;
+  height: 30vh;
   object-fit: cover;
   display: block;
 }
 
 .card--destacada {
-  background-color:#E09249;
+  background-color: #E09249;
 }
 
 .card__titulo {
   font-size: 1em;
   text-align: center;
-color: #ffffff;
+  color: #ffffff;
 }
 
 .card__boton {
@@ -129,25 +150,26 @@ color: #ffffff;
   padding: 10px 20px;
 }
 
-h1{
-    color: #455683;
-    text-align: center;
-    padding: 10px;
-    margin-top: 10px;
+@media (max-width: 768px) {
+  .metodo {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }
 
-h2{
-    font-size: 13px;
-    color:#455683;
+h1 {
+  color: #455683;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
 }
 
-.img-logo{
-    width: 20vw;
-    height: auto;
-    display: block;
+h2 {
+  font-size: 13px;
+  color: #455683;
 }
 
-.galeria{
+.galeria {
   width: 70vw;
   margin: 0 auto;
   display: flex;
@@ -177,12 +199,12 @@ h2{
   }
 }
 
-.em{
-    font-size: 2em;
+.em {
+  font-size: 2em;
 }
 
 .formulario {
-  width:70%;
+  width: 70%;
   max-width: 500px;
   margin: 0 auto;
   display: flex;
@@ -205,7 +227,7 @@ h2{
 }
 
 .formulario button {
-  background-color:#455683;
+  background-color: #455683;
   border: none;
   color: #ffffff;
   padding: 10px 26px;
@@ -230,24 +252,34 @@ h2{
 .mapa iframe {
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9; /* mantiene proporción responsiva */
+  aspect-ratio: 16 / 9;
+  /* mantiene proporción responsiva */
   display: block;
 }
 
-  footer{
-    display: flex;
-    flex-direction: row-reverse;
-    padding: 10px 20px;
-    width: 70vw;
-    margin: 0 auto;
-  }
-.rrss{
-    width: 5vw;
+footer {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 10px 20px;
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.rrss {
+  width: 5vw;
+  height: auto;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .rrss {
+    width: 15vw;
     height: auto;
     padding: 10px;
-
+  }
 
 }
+
 --#{$prefix}accordion-color: #{$accordion-color};
 --#{$prefix}accordion-bg: #{$accordion-bg};
 --#{$prefix}accordion-transition: #{$accordion-transition};

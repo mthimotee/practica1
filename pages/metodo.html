@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro Arco Iris - Metodo de trabajo</title>
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
+
 <body>
 
-     <header class="navbar">
+    <header class="navbar">
         <section>
             <a href="../index.html">
-            <img src="../images/logo_centro.jpg" class="img-logo" alt="logo_centro_arco_iris">
+                <img src="../images/logo_centro.jpg" class="img-logo" alt="logo_centro_arco_iris">
             </a>
         </section>
-            <nav>
-                <button class="menu-toggle" id="menu-toggle">&#9776;</button>
-                <ul class="menu" id="menu">
-                    <li>
+        <nav>
+            <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+            <ul class="menu" id="menu">
+                <li>
                     <a href="./sobre_centro.html">Sobre el Centro</a>
                 </li>
                 <li>
@@ -29,36 +31,36 @@
                 <li>
                     <a href="./contacto.html">Contacto</a>
                 </li>
-                </ul>
-            </nav>
+            </ul>
+        </nav>
 
-        </header>
-    
+    </header>
+
     <main class="metodo">
         <div class="card card--destacada">
-  <h2 class="card__titulo"> El Camino de lo Venidero</h2>
-  <div class="card__imagen-wrapper">
-  <img src="../images/venidero.jpg" alt="" class="card_imagen">
-  </div>
-  <p class="card__descripcion">Descripción del producto</p>
-  <button class="card__boton">Ver</button>
-    </div>
-    <div class="card card--destacada">
-  <h2 class="card__titulo">El inconsciente colectivo</h2>
-   <div class="card__imagen-wrapper">
-   <img src="../images/venidero.jpg" alt="">
-    </div>
-  <p class="card__descripcion">Descripción del producto</p>
-  <button class="card__boton">Ver</button>
-    </div>
-    <div class="card card--destacada">
-  <h2 class="card__titulo">La Psicología Analítica</h2>
-   <div class="card__imagen-wrapper">
-   <img src="../images/venidero.jpg" alt="">
-   </div>
-  <p class="card__descripcion">Descripción del producto</p>
-  <button class="card__boton">Ver</button>
-    </div>
+            <h2 class="card__titulo"> El Camino de lo Venidero</h2>
+            <div class="card__imagen-wrapper">
+                <img src="../images/venidero.jpg" alt="" class="card__imagen">
+            </div>
+            <p class="card__descripcion">Descripción del producto</p>
+            <button class="card__boton">Ver</button>
+        </div>
+        <div class="card card--destacada">
+            <h2 class="card__titulo">El inconsciente colectivo</h2>
+            <div class="card__imagen-wrapper">
+                <img src="../images/venidero.jpg" alt="" class="card__imagen">
+            </div>
+            <p class="card__descripcion">Descripción del producto</p>
+            <button class="card__boton">Ver</button>
+        </div>
+        <div class="card card--destacada">
+            <h2 class="card__titulo">La Psicología Analítica</h2>
+            <div class="card__imagen-wrapper">
+                <img src="../images/venidero.jpg" alt="" class="card__imagen">
+            </div>
+            <p class="card__descripcion">Descripción del producto</p>
+            <button class="card__boton">Ver</button>
+        </div>
     </main>
 
     <footer>
@@ -67,6 +69,14 @@
         <img src="../images/what.png" class="rrss" alt="">
 
     </footer>
-        
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
 </body>
+
 </html>

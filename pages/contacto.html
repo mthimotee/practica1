@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro Arco Iris - Contacto</title>
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
+
 <body>
-    
-     <header class="navbar">
+
+    <header class="navbar">
         <section>
             <a href="../index.html">
-            <img src="../images/logo_centro.jpg" class="img-logo" alt="logo_centro_arco_iris">
+                <img src="../images/logo_centro.jpg" class="img-logo" alt="logo_centro_arco_iris">
             </a>
         </section>
-            <nav>
-                <button class="menu-toggle" id="menu-toggle">&#9776;</button>
-                <ul class="menu" id="menu">
+        <nav>
+            <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+            <ul class="menu" id="menu">
                 <li>
                     <a href="./sobre_centro.html">Sobre el Centro</a>
                 </li>
@@ -29,33 +31,36 @@
                 <li>
                     <a href="./contacto.html">Contacto</a>
                 </li>
-                </ul>
-            </nav>
+            </ul>
+        </nav>
 
-        </header>
+    </header>
     </header>
 
     <main>
         <h1>contacto</h1>
 
-   <form class="formulario" action="#" method="post">
-  <label for="nombre">Nombres:</label>
-  <input type="text" id="nombre" name="nombre" required>
+        <form class="formulario" action="#" method="post">
+            <label for="nombre">Nombres:</label>
+            <input type="text" id="nombre" name="nombre" required>
 
-  <label for="apellido">Apellido:</label>
-  <input type="text" id="apellido" name="apellido" required>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
 
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-  <label for="mensaje">Mensaje:</label>
-  <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
 
-  <button type="submit">Enviar</button>
-</form>
+            <button type="submit">Enviar</button>
+        </form>
         <div class="mapa">
 
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1341.5896136818963!2d-60.32474067633645!3d-36.89379711998702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959445daae9e90a3%3A0xd11aadb313dbf072!2sOlavarr%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1746200423750!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1341.5896136818963!2d-60.32474067633645!3d-36.89379711998702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959445daae9e90a3%3A0xd11aadb313dbf072!2sOlavarr%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1746200423750!5m2!1ses!2sar"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         </div>
     </main>
@@ -66,6 +71,14 @@
         <img src="../images/what.png" class="rrss" alt="">
 
     </footer>
-    
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
 </body>
+
 </html>
