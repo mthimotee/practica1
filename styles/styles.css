@@ -1,160 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
 }
 
-
 body {
   font-family: Roboto;
   background-color: #F1DFC2;
-}
-
-.navbar {
-  display: flex;
-  padding: 10px 20px;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100vw;
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  padding: 20px;
-  gap: 20px;
-}
-
-.menu li a {
-  text-decoration: none;
-  color: #455683;
-}
-
-.menu li a:hover {
-  color: #cc4f48;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 30px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  margin-left: auto;
-}
-
-.img-logo {
-  width: 20vw;
-  height: auto;
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .img-logo {
-    width: 50vw;
-  }
-}
-
-@media (max-width: 768px) {
-  .menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    right: 12.5vw;
-    /* Esto hace que se alinee al main (que tiene 75vw de ancho) */
-    width: 75vw;
-    background-color: #ffffff;
-    padding: 10px 20px;
-    text-align: right;
-    z-index: 1000;
-    /* Esto asegura que quede por encima del carrusel */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .menu.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .navbar {
-    position: relative;
-    z-index: 1001;
-  }
-}
-
-main {
-  font-size: 15px;
-  font-family: Roboto;
-  width: 75vw;
-  margin: 0 auto;
-}
-
-p {
-  text-align: center;
-}
-
-.metodo {
-  width: 70vw;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.card {
-  width: 70vw;
-  max-width: 300px;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  align-items: center;
-}
-
-.card__imagen-wrapper {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-}
-
-.card__imagen {
-  width: 100%;
-  height: 30vh;
-  object-fit: cover;
-  display: block;
-}
-
-.card--destacada {
-  background-color: #E09249;
-}
-
-.card__titulo {
-  font-size: 1em;
-  text-align: center;
-  color: #ffffff;
-}
-
-.card__boton {
-  background-color: #004080;
-  color: white;
-  align-self: center;
-  width: 100%;
-  text-align: center;
-  padding: 10px 20px;
-}
-
-@media (max-width: 768px) {
-  .metodo {
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
 }
 
 h1 {
@@ -169,6 +21,108 @@ h2 {
   color: #455683;
 }
 
+.navbar {
+  display: flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+}
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+    z-index: 1001;
+  }
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+.menu li a {
+  text-decoration: none;
+  color: #455683;
+}
+.menu li a:hover {
+  color: #cc4f48;
+}
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 12.5vw;
+    width: 75vw;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    text-align: right;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .menu.active {
+    display: flex;
+  }
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+}
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+}
+
+.img-logo {
+  width: 20vw;
+  height: auto;
+  display: block;
+}
+@media (max-width: 768px) {
+  .img-logo {
+    width: 50vw;
+  }
+}
+
+main {
+  font-size: 15px;
+  font-family: Roboto;
+  width: 75vw;
+  margin: 0 auto;
+}
+
+p {
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 10px 20px;
+  width: 70vw;
+  margin: 0 auto;
+}
+footer .rrss {
+  width: 5vw;
+  height: auto;
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  footer .rrss {
+    width: 15vw;
+  }
+}
+
 .galeria {
   width: 70vw;
   margin: 0 auto;
@@ -178,7 +132,12 @@ h2 {
   flex-wrap: wrap;
   box-sizing: border-box;
 }
-
+@media (max-width: 768px) {
+  .galeria {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .galeria img {
   flex: 1 1 0;
   max-width: calc((70vw - 40px) / 3);
@@ -186,21 +145,73 @@ h2 {
   width: 100%;
   object-fit: contain;
   display: block;
+  animation: fadeIn 1s ease-in-out both;
 }
-
-@media (max-width: 600px) {
-  .galeria {
-    flex-direction: column;
-    align-items: center;
-  }
-
+@media (max-width: 768px) {
   .galeria img {
     max-width: 100%;
   }
 }
 
-.em {
-  font-size: 2em;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.metodo {
+  width: 70vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .metodo {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+.card {
+  width: 70vw;
+  max-width: 300px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  align-items: center;
+}
+.card--destacada {
+  background-color: #E09249;
+}
+.card__imagen-wrapper {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+.card__imagen {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+  display: block;
+}
+.card__titulo {
+  font-size: 1em;
+  text-align: center;
+  color: #ffffff;
+}
+.card__boton {
+  background-color: #004080;
+  color: white;
+  align-self: center;
+  width: 100%;
+  text-align: center;
+  padding: 10px 20px;
 }
 
 .formulario {
@@ -211,11 +222,9 @@ h2 {
   flex-direction: column;
   gap: 15px;
 }
-
 .formulario label {
   font-weight: bold;
 }
-
 .formulario input,
 .formulario textarea {
   padding: 10px;
@@ -225,7 +234,6 @@ h2 {
   width: 100%;
   box-sizing: border-box;
 }
-
 .formulario button {
   background-color: #455683;
   border: none;
@@ -237,7 +245,6 @@ h2 {
   font-size: 14px;
   border-radius: 5px;
 }
-
 .formulario button:hover {
   background-color: #002f5f;
 }
@@ -248,56 +255,11 @@ h2 {
   margin: 20px auto;
   box-sizing: border-box;
 }
-
 .mapa iframe {
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;
-  /* mantiene proporción responsiva */
+  aspect-ratio: 16/9;
   display: block;
 }
 
-footer {
-  display: flex;
-  flex-direction: row-reverse;
-  padding: 10px 20px;
-  width: 70vw;
-  margin: 0 auto;
-}
-
-.rrss {
-  width: 5vw;
-  height: auto;
-  padding: 10px;
-}
-
-@media (max-width: 768px) {
-  .rrss {
-    width: 15vw;
-    height: auto;
-    padding: 10px;
-  }
-
-}
-
---#{$prefix}accordion-color: #{$accordion-color};
---#{$prefix}accordion-bg: #{$accordion-bg};
---#{$prefix}accordion-transition: #{$accordion-transition};
---#{$prefix}accordion-border-color: #{$accordion-border-color};
---#{$prefix}accordion-border-width: #{$accordion-border-width};
---#{$prefix}accordion-border-radius: #{$accordion-border-radius};
---#{$prefix}accordion-inner-border-radius: #{$accordion-inner-border-radius};
---#{$prefix}accordion-btn-padding-x: #{$accordion-button-padding-x};
---#{$prefix}accordion-btn-padding-y: #{$accordion-button-padding-y};
---#{$prefix}accordion-btn-color: #{$accordion-button-color};
---#{$prefix}accordion-btn-bg: #{$accordion-button-bg};
---#{$prefix}accordion-btn-icon: #{escape-svg($accordion-button-icon)};
---#{$prefix}accordion-btn-icon-width: #{$accordion-icon-width};
---#{$prefix}accordion-btn-icon-transform: #{$accordion-icon-transform};
---#{$prefix}accordion-btn-icon-transition: #{$accordion-icon-transition};
---#{$prefix}accordion-btn-active-icon: #{escape-svg($accordion-button-active-icon)};
---#{$prefix}accordion-btn-focus-box-shadow: #{$accordion-button-focus-box-shadow};
---#{$prefix}accordion-body-padding-x: #{$accordion-body-padding-x};
---#{$prefix}accordion-body-padding-y: #{$accordion-body-padding-y};
---#{$prefix}accordion-active-color: #{$accordion-button-active-color};
---#{$prefix}accordion-active-bg: #{$accordion-button-active-bg};
+/*# sourceMappingURL=styles.css.map */
