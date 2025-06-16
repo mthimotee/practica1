@@ -4,12 +4,14 @@ footer {
   padding: 10px 20px;
   width: 70vw;
   margin: 0 auto;
-    .rrss {
-     width: 5vw;
-     height: auto;
-     padding: 10px;
-     @include mobile {
-     width: 15vw;
-     }
-}
+
+  .rrss {
+    width: 5vw;
+    height: auto;
+    padding: 10px;
+
+    @include mobile {
+      width: 10vw;
+    }
+  }
 }

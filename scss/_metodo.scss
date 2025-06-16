@@ -16,18 +16,19 @@
   max-width: 300px;
   margin: auto;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #cc8c03;
   box-sizing: border-box;
   align-items: center;
 
   &--destacada {
-    background-color: #E09249;
+    background-color: #ddaa7a;
   }
 
   &__imagen-wrapper {
     width: 100%;
     aspect-ratio: 4 / 3;
     overflow: hidden;
+    margin-bottom: 10px;
   }
 
   &__imagen {
@@ -40,15 +41,22 @@
   &__titulo {
     font-size: 1em;
     text-align: center;
+    padding-bottom: 10px;
     color: #ffffff;
   }
 
   &__boton {
-    background-color: #004080;
+    background-color: #455683;
     color: white;
-    align-self: center;
-    width: 100%;
+    width: 50%;
     text-align: center;
     padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 63px;
+    margin-top: 10px;
+
+    &:hover {
+      background-color: #002f5f;
+    }
   }
 }
